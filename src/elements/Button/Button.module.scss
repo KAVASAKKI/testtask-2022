@@ -1,0 +1,29 @@
+.button {
+  cursor: pointer;
+
+  font-family: 'Nunito Regular';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+
+  padding: 4px 23px;
+
+  color: black;
+  background-color: #f4e041;
+
+  border-radius: 80px;
+  border: none;
+
+  transition: background-color 200ms linear;
+
+  &:hover {
+    background-color: #ffe302;
+  }
+
+  &:disabled {
+    cursor: auto;
+
+    color: white;
+    background-color: #b4b4b4;
+  }
+}
