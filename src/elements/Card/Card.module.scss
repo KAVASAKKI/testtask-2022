@@ -11,12 +11,14 @@
   border-radius: 10px;
   background-color: #ffffff;
 
-  font-family: 'Nunito Regular';
+  font-family: "Nunito Regular";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
   text-align: center;
+
+  cursor: pointer;
 
   & .name {
     margin: 0px;
