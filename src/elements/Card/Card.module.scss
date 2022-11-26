@@ -1,0 +1,45 @@
+@mixin text-overflow {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.container {
+  width: 328px;
+  padding: 20px;
+
+  border-radius: 10px;
+  background-color: #ffffff;
+
+  font-family: 'Nunito Regular';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+
+  & .name {
+    margin: 0px;
+    margin-bottom: 20px;
+
+    @include text-overflow;
+  }
+
+  & .position {
+    margin: 0px;
+
+    @include text-overflow;
+  }
+
+  & .email {
+    margin: 0px;
+
+    @include text-overflow;
+  }
+
+  & .phone {
+    margin: 0px;
+
+    @include text-overflow;
+  }
+}
