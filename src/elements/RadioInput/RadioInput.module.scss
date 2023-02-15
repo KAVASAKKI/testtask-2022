@@ -1,0 +1,45 @@
+.label {
+  cursor: pointer;
+}
+
+.input {
+  appearance: none;
+  position: absolute;
+
+  &:checked {
+    & + .customInput {
+      border-color: #00bdd3;
+
+      & .dot {
+        background-color: #00bdd3;
+      }
+    }
+  }
+}
+
+.customInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 20px;
+  height: 20px;
+
+  border: 1px solid #d0cfcf;
+  border-radius: 50%;
+
+  transition: all 200ms linear;
+
+  & .dot {
+    display: inherit;
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: inherit;
+
+    background-color: transparent;
+
+    transition: all 200ms linear;
+  }
+}

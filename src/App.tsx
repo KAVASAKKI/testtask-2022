@@ -1,4 +1,5 @@
 import React from 'react';
+import CircularProgress from '@mui/material/CircularProgress';
 import { Heading } from 'elements/Heading/Heading';
 import { Font } from 'elements/Font/Font';
 import { Text } from 'elements/Text/Text';
@@ -6,8 +7,9 @@ import { Button } from 'elements/Button/Button';
 import { FileInput } from 'elements/FileInput/FileInput';
 import { Input } from 'elements/Input/Input';
 import { Card } from 'elements/Card/Card';
-import { Image } from 'elements/Image/Image';
 import './App.scss';
+import { PositionRadioGroup } from 'elements/PositionRadioGroup/PositionRadioGroup';
+import { RadioInput } from 'elements/RadioInput/RadioInput';
 
 export const App = () => {
   return (
@@ -34,6 +36,14 @@ export const App = () => {
       />
 
       <Card />
+
+      <CircularProgress style={{ color: '#00BDD3' }} />
+
+      {/* <PositionRadioGroup /> */}
+      <RadioInput name="position-radio" value="Frontend Developer" />
+      <RadioInput name="position-radio" value="Backend developer" />
+      <RadioInput name="position-radio" value="Designer" />
+      <RadioInput name="position-radio" value="QA" />
     </div>
   );
 };
