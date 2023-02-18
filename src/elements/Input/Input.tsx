@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import cx from 'classnames';
-import { useValidate } from 'hooks/useValidate';
-import styles from './Input.module.scss';
+import { useState } from "react";
+import cx from "classnames";
+import { useValidate } from "hooks/useValidate";
+import styles from "./Input.module.scss";
 
 type InputType = {
   type: string;
@@ -9,15 +9,10 @@ type InputType = {
   label: string;
   helperText?: string;
   isRequired?: boolean;
+  className?: string;
 };
 
-export const Input = ({
-  type,
-  name,
-  label,
-  helperText,
-  isRequired,
-}: InputType) => {
+export const Input = ({ type, name, label, helperText, isRequired, className }: InputType) => {
   const [isFocus, setIsFocus] = useState(false);
   const { onValidate, isError, message } = useValidate(isRequired, helperText);
 
@@ -35,7 +30,7 @@ export const Input = ({
   });
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${className}`}>
       <label className={labelCX} htmlFor={name}>
         {label}
       </label>
@@ -46,7 +41,7 @@ export const Input = ({
         type={type}
         name={name}
         onFocus={() => setIsFocus(true)}
-        onBlur={(e) => e.target.value === '' && setIsFocus(false)}
+        onBlur={(e) => e.target.value === "" && setIsFocus(false)}
         onChange={onValidate}
       />
 

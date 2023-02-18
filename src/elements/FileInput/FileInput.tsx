@@ -1,25 +1,25 @@
-import { BaseSyntheticEvent, useState } from 'react';
-import cx from 'classnames';
-import styles from './FileInput.module.scss';
+import { BaseSyntheticEvent, useState } from "react";
+import cx from "classnames";
+import styles from "./FileInput.module.scss";
 
-type FileInputType = { buttonName: string; placeholder: string };
+type FileInputType = { buttonName: string; placeholder: string; className?: string };
 
-export const FileInput = ({ buttonName, placeholder }: FileInputType) => {
+export const FileInput = ({ buttonName, placeholder, className }: FileInputType) => {
   const [fileName, setFileName] = useState(placeholder);
   const [isFilled, setIsFilled] = useState(false);
   const [isError, setIsError] = useState(false);
-  const [errorMsg, setErrorMsg] = useState('');
+  const [errorMsg, setErrorMsg] = useState("");
 
   const uploadFile = (e: BaseSyntheticEvent) => {
     const file = e.target.files[0];
-    const isImage = RegExp('image').exec(file.type);
+    const isImage = RegExp("image").exec(file.type);
 
     setIsFilled(true);
     setFileName(file.name);
 
     if (!isImage) {
       setIsError(true);
-      setErrorMsg('Choose image');
+      setErrorMsg("Choose image");
     } else {
       setIsError(false);
     }
@@ -35,8 +35,8 @@ export const FileInput = ({ buttonName, placeholder }: FileInputType) => {
   });
 
   return (
-    <div className={styles.container}>
-      <label htmlFor="file-input" className={labelCX}>
+    <div className={`${styles.container} ${className}`}>
+      <label htmlFor='file-input' className={labelCX}>
         {buttonName}
 
         {isError && <div className={styles.errorMsg}>{errorMsg}</div>}
@@ -44,10 +44,10 @@ export const FileInput = ({ buttonName, placeholder }: FileInputType) => {
 
       <input
         onChange={uploadFile}
-        id="file-input"
+        id='file-input'
         className={styles.input}
-        type={'file'}
-        accept="image/*"
+        type={"file"}
+        accept='image/*'
       />
 
       <div className={fileNameCX}>{fileName}</div>

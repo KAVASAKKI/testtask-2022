@@ -1,7 +1,7 @@
 $error-color: #cb3d40;
 
 @mixin font-normal {
-  font-family: 'Nunito Regular';
+  font-family: "Nunito Regular";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -10,9 +10,6 @@ $error-color: #cb3d40;
 
 .container {
   position: relative;
-
-  margin: 40px 20px;
-  width: 328px;
 
   color: rgba(0, 0, 0, 0.87);
 
@@ -73,7 +70,7 @@ $error-color: #cb3d40;
 
     transform: translateY(100%);
 
-    font-family: 'Nunito Regular';
+    font-family: "Nunito Regular";
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
