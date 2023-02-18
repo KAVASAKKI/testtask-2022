@@ -1,5 +1,15 @@
 @import "/node_modules/modern-normalize/modern-normalize.css";
+@font-face {
+  font-family: "Nunito Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/nunito/Nunito-Regular.ttf") format("woff2");
+}
 
 $primary-color: #f4e041;
 $secondary-color: #00bdd3;
 $background-color: #f8f8f8;
+
+body {
+  background-color: $background-color;
+}
