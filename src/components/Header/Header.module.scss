@@ -1,0 +1,12 @@
+.container {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & .buttons {
+    & .button + .button {
+      margin-left: 10px;
+    }
+  }
+}

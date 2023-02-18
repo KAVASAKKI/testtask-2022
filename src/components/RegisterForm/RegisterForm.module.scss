@@ -1,0 +1,19 @@
+.container {
+  width: 380px;
+  outline: 1px solid black;
+
+  & .input {
+    margin-bottom: 50px;
+  }
+
+  & .radioGroup {
+    margin-bottom: 50px;
+  }
+
+  & .fileInput {
+    margin-bottom: 50px;
+  }
+
+  & .submitBtn {
+  }
+}
